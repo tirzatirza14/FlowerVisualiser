@@ -108,5 +108,5 @@ function draw() {
 
 function randomiser() {
    var rando = floor(random(1, 6))
-   return 5
+   return rando
 }
