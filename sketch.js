@@ -84,11 +84,11 @@ function draw() {
       freq = frameCount * 0.01
       var amp = spectrum[i]
       var r = map(amp, 0, 256, 10, 256)
-      sinVal = noise(freq) * r
+      sinVal = noise(r) * r
 
       freq = frameCount * 0.015
       r = map(amp, 0, 256, 10, 256)
-      distance = sin(freq) * r
+      distance = sin(r) * r
       
       colour = map(r, 10, 200, 0, 360)
 
@@ -101,6 +101,7 @@ function draw() {
       strokeWeight(0.5)
       //point(r,r)
       line(0, 0, r, 0)
+      //line(0, 0, distance, 0)
    }
    pop()
 }
